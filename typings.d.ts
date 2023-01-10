@@ -11,6 +11,9 @@ export interface HomeData {
   thirdSubtitle: string;
   description: string;
   homeImage: Image;
+  enableModal: boolean;
+  modalTitle: string;
+  modalDescription: string;
 }
 
 export interface MenuData {

@@ -6,6 +6,25 @@ export default defineType({
   type: "document",
   fields: [
     defineField({
+      name: "enableModal",
+      description: "Enable Modal",
+      title: "Enable Modal",
+      type: "boolean",
+    }),
+    defineField({
+      name: "modalTitle",
+      description: "Title of the modal (20% Orders over $50)",
+      title: "Modal Title",
+      type: "string",
+    }),
+    defineField({
+      name: "modalDescription",
+      description:
+        "Description of the modal (For a limited time, get 20% off your order over $50)",
+      title: "Modal Subtitle",
+      type: "string",
+    }),
+    defineField({
       name: "title",
       description: "Title of the page (A Celebration Of)",
       title: "Title",

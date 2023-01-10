@@ -3,14 +3,28 @@ import React from "react";
 import MenuCard from "../../components/MenuCard";
 import { sanityClient } from "../../sanity";
 import { MenuCollection } from "../../typings";
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import {
+  AdjustmentsVerticalIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import { Link } from "react-scroll";
+
 interface MenuProps {
   collections: MenuCollection;
 }
 function Menu({ collections }: MenuProps) {
+  const [open, setOpen] = useState(false);
+
   return (
     <>
       <section className="h-full bg-opacity-10 bg-[url('/bg/menu.png')] bg-cover bg-center bg-no-repeat">
         <div className="mx-auto  max-w-screen-xl px-8 py-24 md:px-16  ">
+          <AdjustmentsVerticalIcon
+            className="fixed right-0 bottom-0 m-10 h-10 w-10 cursor-pointer rounded-full bg-darkred p-2 text-beige"
+            onClick={() => setOpen(true)}
+          />
           <h1 className="mb-8 mt-8 max-w-2xl text-4xl font-black  text-darkred md:text-5xl xl:text-6xl">
             Menu
           </h1>
@@ -164,6 +178,185 @@ function Menu({ collections }: MenuProps) {
               ))}
             </div>
           </div>
+          <Transition.Root show={open} as={Fragment}>
+            <Dialog as="div" className="relative z-10  " onClose={setOpen}>
+              <Transition.Child
+                as={Fragment}
+                enter="ease-in-out duration-500"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="ease-in-out duration-500"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <div className="fixed inset-0 z-20 mt-16 bg-beige/50 bg-opacity-75 backdrop-blur-lg transition-opacity md:mt-24" />
+              </Transition.Child>
+
+              <div className="fixed inset-0 z-40  overflow-hidden">
+                <div className="absolute inset-0 overflow-hidden">
+                  <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                    <Transition.Child
+                      as={Fragment}
+                      enter="transform transition ease-in-out duration-500 sm:duration-700"
+                      enterFrom="translate-x-full"
+                      enterTo="translate-x-0"
+                      leave="transform transition ease-in-out duration-500 sm:duration-700"
+                      leaveFrom="translate-x-0"
+                      leaveTo="translate-x-full"
+                    >
+                      <Dialog.Panel className="pointer-events-auto mt-16 w-screen max-w-md md:mt-24">
+                        <div className="flex h-full flex-col overflow-y-scroll bg-beige py-6 shadow-xl">
+                          <div className="px-4 sm:px-6">
+                            <div className="flex items-start justify-between">
+                              <Dialog.Title className="text-lg font-medium text-darkred">
+                                Scroll Through Menu
+                              </Dialog.Title>
+                              <div className="ml-3 flex h-7 items-center">
+                                <button
+                                  type="button"
+                                  className="rounded-md text-midred hover:text-darkred focus:outline-none focus:ring-2 focus:ring-lightred"
+                                  onClick={() => setOpen(false)}
+                                >
+                                  <span className="sr-only">Close panel</span>
+                                  <XMarkIcon
+                                    className="h-6 w-6"
+                                    aria-hidden="true"
+                                  />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="relative mt-6 flex-1 px-4 sm:px-6 ">
+                            <Link
+                              to="appetizerssides"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Appetizers & Sides
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+
+                            <Link
+                              to="entrees"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Entrees
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                            <Link
+                              to="ricedish"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Rice Dishes
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                            <Link
+                              to="noodles"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Noodles
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                            <Link
+                              to="bread"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Bread
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                            <Link
+                              to="kids"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Kids
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                            <Link
+                              to="breakfast"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Breakfast
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                            <Link
+                              to="kebabstandoor"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Kebabs & Tandoor
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                            <Link
+                              to="desserts"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Desserts
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                            <Link
+                              to="drinks"
+                              smooth={true}
+                              duration={500}
+                              spy={true}
+                              offset={-140}
+                              onClick={() => setOpen(false)}
+                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
+                            >
+                              Drinks
+                            </Link>
+                            <hr className="mb-6 border-darkred/10 " />
+                          </div>
+                        </div>
+                      </Dialog.Panel>
+                    </Transition.Child>
+                  </div>
+                </div>
+              </div>
+            </Dialog>
+          </Transition.Root>
         </div>
       </section>
     </>

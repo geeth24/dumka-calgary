@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 function Footer() {
   return (
     <footer className="rounded-lg p-4 py-[13px]  px-[16px] md:px-[4vw] lg:mt-5 lg:pt-[35px]">
       <div className="sm:flex sm:items-center sm:justify-between">
         <Link href="/" className=" flex items-center ">
-          <img src="/logo.png" className="-ml-3 h-16" alt="Flowbite Logo" />
+          <Image src="/logo.png" className="-ml-3 h-16" alt="Flowbite Logo" />
         </Link>
 
         <ul className="flex flex-wrap items-center text-sm text-navred ">

@@ -2,18 +2,26 @@ import { motion } from "framer-motion";
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import { useState } from "react";
+import Modal from "../components/Modal";
 import { sanityClient, urlFor } from "../sanity";
 import { HomeData } from "../typings";
 interface Props {
   homeData: HomeData;
 }
 export default function Home({ homeData }: Props) {
+  const [open, setOpen] = useState(homeData.enableModal);
   return (
     <>
       <Head>
         <title>Dumka Calgary</title>
       </Head>
-
+      <Modal
+        open={open}
+        setOpen={setOpen}
+        title={homeData.modalTitle}
+        description={homeData.modalDescription}
+      />
       <section className="h-full bg-opacity-10 bg-[url('/bg/hero.png')] bg-cover bg-center bg-no-repeat">
         <div className="mx-auto grid max-w-screen-xl overflow-hidden px-8 py-24 md:px-16 lg:grid-cols-12 lg:gap-8 lg:py-32 xl:gap-0">
           <div className="mr-auto place-self-center lg:col-span-5">
@@ -59,6 +67,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
         secondSubtitle,
         thirdSubtitle,
         description,
+        enableModal,
+        modalTitle,
+        modalDescription,
         homeImage{
           asset
         },
