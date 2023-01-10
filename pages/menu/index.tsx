@@ -2,12 +2,6 @@ import { GetServerSideProps } from "next";
 import MenuCard from "../../components/MenuCard";
 import { sanityClient } from "../../sanity";
 import { MenuCollection } from "../../typings";
-import { Fragment, useState } from "react";
-import { Dialog, Transition } from "@headlessui/react";
-import {
-  AdjustmentsVerticalIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
 import { Link } from "react-scroll";
 
 interface MenuProps {
@@ -17,120 +11,120 @@ function Menu({ collections }: MenuProps) {
   return (
     <>
       <section className="h-full bg-opacity-10 bg-[url('/bg/menu.png')] bg-cover bg-center bg-no-repeat">
-        <div className=" fixed top-0  flex w-full flex-row items-center space-x-5 overflow-hidden overflow-x-scroll bg-beige/50 p-5 pt-20 backdrop-blur-3xl md:pt-24  xl:justify-center ">
+        <div className="fixed top-0  flex w-full flex-row items-center space-x-5 overflow-hidden overflow-x-scroll bg-beige/50 pr-5 pl-5 pt-20 backdrop-blur-3xl md:pt-24  xl:justify-center">
           <Link
             to="appetizerssides"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred "
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Appetizers & Sides
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
 
           <Link
             to="entrees"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Entrees
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="ricedish"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Rice Dishes
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="noodles"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Noodles
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="bread"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Bread
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="kids"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Kids
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="breakfast"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Breakfast
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="kebabstandoor"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Kebabs & Tandoor
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="desserts"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Desserts
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="drinks"
             smooth={true}
-            duration={500}
+            duration={800}
             spy={true}
-            offset={-200}
-            className=" text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Drinks
           </Link>
-          <hr className="mb-6 border-darkred/10 " />
+          <hr className="mb-6 border-darkred/10" />
         </div>
-        <div className="mx-auto  max-w-screen-xl px-8 py-52 md:px-16 md:py-64  ">
+        <div className="mx-auto  max-w-screen-xl px-8 py-52 md:px-16 md:py-64 ">
           <h1 className="mb-8 mt-8 max-w-2xl text-4xl font-black  text-darkred md:text-5xl xl:text-6xl">
             Menu
           </h1>
@@ -296,61 +290,61 @@ export default Menu;
 export const getServerSideProps: GetServerSideProps = async () => {
   const query = `
     {
-  "appetizerssides": *[_type == "appetizerssides"]{
+ "appetizerssides": *[_type =="appetizerssides"]{
     _id,
     title,
     type,
     price,
    },
-  "bread": *[_type == 'bread']{
+ "bread": *[_type == 'bread']{
     _id,
     title,
     type,
     price,
    },
-    "breakfast": *[_type == 'breakfast']{
+   "breakfast": *[_type == 'breakfast']{
     _id,
     title,
     type,
     price,
    },
-      "desserts": *[_type == 'desserts']{
+     "desserts": *[_type == 'desserts']{
     _id,
     title,
     type,
     price,
    },
-      "drinks": *[_type == 'drinks']{
+     "drinks": *[_type == 'drinks']{
     _id,
     title,
     type,
     price,
    },
-      "entrees": *[_type == 'entrees']{
+     "entrees": *[_type == 'entrees']{
     _id,
     title,
     type,
     price,
    },
-      "kebabstandoor": *[_type == 'kebabstandoor']{
+     "kebabstandoor": *[_type == 'kebabstandoor']{
     _id,
     title,
     type,
     price,
    },
-       "kids": *[_type == 'kids']{
+      "kids": *[_type == 'kids']{
     _id,
     title,
     type,
     price,
    },
-       "noodles": *[_type == 'noodles']{
+      "noodles": *[_type == 'noodles']{
     _id,
     title,
     type,
     price,
    },
-       "ricedish": *[_type == 'ricedish']{
+      "ricedish": *[_type == 'ricedish']{
     _id,
     title,
     type,
