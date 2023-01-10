@@ -179,7 +179,7 @@ function Menu({ collections }: MenuProps) {
             </div>
           </div>
           <Transition.Root show={open} as={Fragment}>
-            <Dialog as="div" className="relative z-10  " onClose={setOpen}>
+            <Dialog as="div" className="  " onClose={setOpen}>
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-500"
@@ -189,7 +189,7 @@ function Menu({ collections }: MenuProps) {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <div className="fixed inset-0 z-20 mt-16 bg-beige/50 bg-opacity-75 backdrop-blur-lg transition-opacity md:mt-24" />
+                <div className="fixed inset-0 z-20 mt-16 bg-beige/50 bg-opacity-75 backdrop-blur-lg transition-opacity lg:mt-24" />
               </Transition.Child>
 
               <div className="fixed inset-0 z-40  overflow-hidden">
@@ -204,7 +204,7 @@ function Menu({ collections }: MenuProps) {
                       leaveFrom="translate-x-0"
                       leaveTo="translate-x-full"
                     >
-                      <Dialog.Panel className="pointer-events-auto mt-16 w-screen max-w-md md:mt-24">
+                      <Dialog.Panel className="pointer-events-auto mt-16 w-screen max-w-md lg:mt-24">
                         <div className="flex h-full flex-col overflow-y-scroll bg-beige py-6 shadow-xl">
                           <div className="px-4 sm:px-6">
                             <div className="flex items-start justify-between">
@@ -214,8 +214,8 @@ function Menu({ collections }: MenuProps) {
                               <div className="ml-3 flex h-7 items-center">
                                 <button
                                   type="button"
-                                  className="rounded-md text-midred hover:text-darkred focus:outline-none focus:ring-2 focus:ring-lightred"
                                   onClick={() => setOpen(false)}
+                                  className="rounded-md text-midred hover:text-darkred focus:outline-none focus:ring-2 focus:ring-lightred"
                                 >
                                   <span className="sr-only">Close panel</span>
                                   <XMarkIcon
@@ -226,15 +226,15 @@ function Menu({ collections }: MenuProps) {
                               </div>
                             </div>
                           </div>
-                          <div className="relative mt-6 flex-1 px-4 sm:px-6 ">
+                          <div className=" mt-6 flex-1 px-4 sm:px-6 ">
                             <Link
                               to="appetizerssides"
                               smooth={true}
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred  "
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Appetizers & Sides
                             </Link>
@@ -246,8 +246,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Entrees
                             </Link>
@@ -258,8 +258,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Rice Dishes
                             </Link>
@@ -270,8 +270,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Noodles
                             </Link>
@@ -282,8 +282,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Bread
                             </Link>
@@ -294,8 +294,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Kids
                             </Link>
@@ -306,8 +306,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Breakfast
                             </Link>
@@ -318,8 +318,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Kebabs & Tandoor
                             </Link>
@@ -330,8 +330,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Desserts
                             </Link>
@@ -342,8 +342,8 @@ function Menu({ collections }: MenuProps) {
                               duration={500}
                               spy={true}
                               offset={-140}
+                              className=" cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                               onClick={() => setOpen(false)}
-                              className="block cursor-pointer text-2xl font-medium text-darkred hover:text-midred"
                             >
                               Drinks
                             </Link>
