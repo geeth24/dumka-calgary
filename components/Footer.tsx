@@ -9,10 +9,10 @@ function Footer() {
         <Link href="/" className=" flex items-center ">
           <Image
             src="/logo.png"
-            className="-ml-3 h-16"
-            alt="Flowbite Logo"
+            className=" h-[60px] w-[160px]"
+            alt="Dumka Logo"
             width={140}
-            height={60}
+            height={40}
           />
         </Link>
 
