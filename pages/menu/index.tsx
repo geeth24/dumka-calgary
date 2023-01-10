@@ -11,7 +11,7 @@ function Menu({ collections }: MenuProps) {
   return (
     <>
       <section className="h-full bg-opacity-10 bg-[url('/bg/menu.png')] bg-cover bg-center bg-no-repeat">
-        <div className="fixed top-0  flex w-full flex-row items-center space-x-5 overflow-hidden overflow-x-scroll bg-beige/50 pr-5 pl-5 pt-20 backdrop-blur-3xl md:pt-24  xl:justify-center">
+        <div className="fixed top-0  flex w-full flex-row items-center space-x-5 overflow-hidden overflow-x-scroll bg-beige/50 pb-5 pr-5 pl-5 pt-20 backdrop-blur-3xl md:pt-24  xl:justify-center">
           <Link
             to="appetizerssides"
             smooth={true}
@@ -20,7 +20,7 @@ function Menu({ collections }: MenuProps) {
             offset={-180}
             className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
-            Appetizers & Sides
+            Appetizers
           </Link>
           <hr className="mb-6 border-darkred/10" />
 
@@ -43,7 +43,7 @@ function Menu({ collections }: MenuProps) {
             offset={-180}
             className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
-            Rice Dishes
+            Rice
           </Link>
           <hr className="mb-6 border-darkred/10" />
           <Link
@@ -98,7 +98,7 @@ function Menu({ collections }: MenuProps) {
             offset={-180}
             className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
-            Kebabs & Tandoor
+            Tandoor
           </Link>
           <hr className="mb-6 border-darkred/10" />
           <Link

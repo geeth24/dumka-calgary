@@ -27,7 +27,7 @@ function Contact() {
               className="flex flex-col items-center justify-center"
             >
               <h1 className="text-3xl text-midred">Phone</h1>
-              <p className="text-xl text-darkred underline">1 (403) 123-4567</p>
+              <p className="text-xl text-darkred underline">+1 825-853-9990</p>
             </Link>
             <div className="flex flex-col items-center justify-center">
               <h1 className="text-3xl text-midred">Hours</h1>
