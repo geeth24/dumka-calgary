@@ -13,7 +13,7 @@ It also allows Dumka Calgary's staff to edit the website using Sanity.io.
 
 
 ## Demo
-https://pistaexpress.com
+https://dumkacalgary.com
 
 
 ## Features
