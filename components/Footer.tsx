@@ -42,7 +42,16 @@ function Footer() {
 
       <hr className="my-3 border-midred sm:mx-auto lg:my-4" />
       <p className="mt-2 text-sm text-navred sm:text-center">
-        +1 (403) 123-4567 | 1234 Main Street, Calgary, AB T2T 2T2
+        <Link href="tel:+1 825-853-9990" className="underline">
+          +1 825-853-9990{" "}
+        </Link>{" "}
+        |{" "}
+        <Link
+          href="https://www.google.com/maps/search/?api=1&query=dumka indian cuisine calgary"
+          className="underline"
+        >
+          2929 Sunridge Way NE #102, Calgary, AB
+        </Link>
       </p>
       <span className="block text-sm text-navred sm:text-center">
         © {new Date().getFullYear()} Dumka Calgary. All rights reserved.

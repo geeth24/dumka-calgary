@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function Contact() {
@@ -9,19 +10,30 @@ function Contact() {
             Contact
           </h1>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            <div className="flex flex-col items-center justify-center">
+            <Link
+              href="https://www.google.com/maps/search/?api=1&query=dumka indian cuisine calgary"
+              className="flex flex-col items-center justify-center"
+            >
               <h1 className="text-3xl text-midred">Address</h1>
-              <p className="text-xl text-darkred">1234 Main Street</p>
-              <p className="text-xl text-darkred">Calgary, AB T2T 2T2</p>
-            </div>
-            <div className="flex flex-col items-center justify-center">
+              <p className="text-xl text-darkred underline">
+                2929 Sunridge Way NE #102
+              </p>
+              <p className="text-xl text-darkred underline">
+                Calgary, AB T1Y 7K7
+              </p>
+            </Link>
+            <Link
+              href="tel:+1 825-853-9990"
+              className="flex flex-col items-center justify-center"
+            >
               <h1 className="text-3xl text-midred">Phone</h1>
-              <p className="text-xl text-darkred">1 (403) 123-4567</p>
-            </div>
+              <p className="text-xl text-darkred underline">1 (403) 123-4567</p>
+            </Link>
             <div className="flex flex-col items-center justify-center">
               <h1 className="text-3xl text-midred">Hours</h1>
-              <p className="text-xl text-darkred">Monday - Friday</p>
-              <p className="text-xl text-darkred">7am - 10pm</p>
+              <p className="text-xl text-darkred">Tuesday - Sunday</p>
+              <p className="text-xl text-darkred">4pm - 1am</p>
+              <p className="text-xl text-darkred">Closed Monday</p>
             </div>
           </div>
         </div>
