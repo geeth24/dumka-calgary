@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-// import { Link } from "react-scroll";
+import { Link as RLink } from "react-scroll";
 export default function Navbar() {
   const [isMenu, setIsMenu] = useState(false);
   const router = useRouter();
@@ -24,9 +24,9 @@ export default function Navbar() {
         <Image
           src="/logo.png"
           width={140}
-          height={60}
+          height={40}
           alt=""
-          className="lg:h-[80px] lg:w-[200px]"
+          className="lg:h-[60px] lg:w-[160px]"
         />
       </Link>
       <div

@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" className="scroll-smooth">
       <Head>
         <link rel="icon" href="/pot.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,6 +23,11 @@ export default function Document() {
           property="og:description"
           content="Immerse Yourself In A Sensory Spice Experience And Awaken Your Tastebuds With Our Modern Indian Menu, Showcasing The Very Best Of Indias Exotic Flavors."
         />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css"
+        />
+
         <meta property="og:url" content="https://dumkacalgary.com" />
       </Head>
       <body className="bg-[#FFF5EC]">
