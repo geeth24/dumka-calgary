@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-
+import { SiNextdotjs, SiTailwindcss, SiFramer } from "react-icons/si";
 function Footer() {
   return (
     <footer className="rounded-lg p-4 py-[13px]  px-[16px] md:px-[4vw] lg:mt-5 lg:pt-[35px]">
@@ -48,7 +48,17 @@ function Footer() {
         © {new Date().getFullYear()} Dumka Calgary. All rights reserved.
       </span>
       <span className="block text-sm text-navred sm:text-center">
-        Built by{" "}
+        Built with{" "}
+        <Link href="https://nextjs.org/" className="hover:underline">
+          <SiNextdotjs className="inline-block h-4 w-4" />
+        </Link>{" "}
+        <Link href="https://tailwindcss.com/" className="hover:underline">
+          <SiTailwindcss className="inline-block h-4 w-4" />
+        </Link>{" "}
+        <Link href="https://www.framer.com/motion/" className="hover:underline">
+          <SiFramer className="inline-block h-4 w-4" />
+        </Link>{" "}
+        by{" "}
         <Link href="https://geethg.com" className="underline">
           Geeth Gunnampalli
         </Link>
