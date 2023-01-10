@@ -50,7 +50,7 @@ function Footer() {
           href="https://www.google.com/maps/search/?api=1&query=dumka indian cuisine calgary"
           className="underline"
         >
-          2929 Sunridge Way NE #102, Calgary, AB
+          2929 Sunridge Way NE #102, Calgary
         </Link>
       </p>
       <span className="block text-sm text-navred sm:text-center">
