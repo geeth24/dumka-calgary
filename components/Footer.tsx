@@ -57,7 +57,7 @@ function Footer() {
         © {new Date().getFullYear()} Dumka Calgary. All rights reserved.
       </span>
       <span className="block text-sm text-navred sm:text-center">
-        Built with{" "}
+        Developed with{" "}
         <Link href="https://nextjs.org/" className="hover:underline">
           <SiNextdotjs className="inline-block h-4 w-4" />
         </Link>{" "}
@@ -68,8 +68,8 @@ function Footer() {
           <SiFramer className="inline-block h-4 w-4" />
         </Link>{" "}
         by{" "}
-        <Link href="https://geethg.com" className="underline">
-          Geeth Gunnampalli
+        <Link href="https://geethg.com" className="text-darkred underline">
+          Geeth
         </Link>
       </span>
     </footer>

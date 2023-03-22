@@ -24,6 +24,8 @@ export interface MenuData {
 
 export interface MenuCollection {
   appetizerssides: MenuData[];
+  vegappetizers: MenuData[];
+  nonvegappetizers: MenuData[];
   bread: MenuData[];
   breakfast: MenuData[];
   desserts: MenuData[];

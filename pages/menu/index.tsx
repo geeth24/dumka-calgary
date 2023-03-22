@@ -13,17 +13,27 @@ function Menu({ collections }: MenuProps) {
       <section className="h-full bg-opacity-10 bg-[url('/bg/menu.png')] bg-cover bg-center bg-no-repeat">
         <div className="fixed top-0  flex w-full flex-row items-center space-x-5 overflow-hidden overflow-x-scroll bg-beige/50 pb-5 pr-5 pl-5 pt-20 backdrop-blur-3xl md:pt-24  xl:justify-center">
           <Link
-            to="appetizerssides"
+            to="vegappetizers"
             smooth={true}
             duration={800}
             spy={true}
             offset={-180}
             className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
-            Appetizers
+            Veg Appetizers
           </Link>
           <hr className="mb-6 border-darkred/10" />
-
+          <Link
+            to="vegappetizers"
+            smooth={true}
+            duration={800}
+            spy={true}
+            offset={-180}
+            className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
+          >
+            Non Veg Appetizers
+          </Link>
+          <hr className="mb-6 border-darkred/10" />
           <Link
             to="entrees"
             smooth={true}
@@ -46,7 +56,7 @@ function Menu({ collections }: MenuProps) {
             Rice
           </Link>
           <hr className="mb-6 border-darkred/10" />
-          <Link
+          {/* <Link
             to="noodles"
             smooth={true}
             duration={800}
@@ -55,8 +65,8 @@ function Menu({ collections }: MenuProps) {
             className="text-md nowrap cursor-pointer font-medium text-darkred hover:text-midred"
           >
             Noodles
-          </Link>
-          <hr className="mb-6 border-darkred/10" />
+          </Link> */}
+          {/* <hr className="mb-6 border-darkred/10" /> */}
           <Link
             to="bread"
             smooth={true}
@@ -129,12 +139,27 @@ function Menu({ collections }: MenuProps) {
             Menu
           </h1>
 
-          <div id="appetizerssides" className="mb-8">
+          <div id="vegappetizers" className="mb-8">
             <h6 className="mb-8 max-w-2xl text-xl font-bold text-midred md:text-3xl xl:text-4xl">
-              Appetizers & Sides
+              Veg Appetizers
             </h6>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {collections.appetizerssides.map((item, index) => (
+              {collections.vegappetizers.map((item, index) => (
+                <MenuCard
+                  key={index}
+                  title={item.title}
+                  type={item.type}
+                  price={item.price}
+                />
+              ))}
+            </div>
+          </div>
+          <div id="nonvegappetizers" className="mb-8">
+            <h6 className="mb-8 max-w-2xl text-xl font-bold text-midred md:text-3xl xl:text-4xl">
+              Non Veg Appetizers
+            </h6>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {collections.nonvegappetizers.map((item, index) => (
                 <MenuCard
                   key={index}
                   title={item.title}
@@ -174,7 +199,7 @@ function Menu({ collections }: MenuProps) {
               ))}
             </div>
           </div>
-          <div id="noodles" className="mb-8">
+          {/* <div id="noodles" className="mb-8">
             <h6 className="mb-8 max-w-2xl text-xl font-bold text-midred md:text-3xl xl:text-4xl">
               Noodles
             </h6>
@@ -188,7 +213,7 @@ function Menu({ collections }: MenuProps) {
                 />
               ))}
             </div>
-          </div>
+          </div> */}
           <div id="bread" className="mb-8">
             <h6 className="mb-8 max-w-2xl text-xl font-bold text-midred md:text-3xl xl:text-4xl">
               Bread
@@ -296,6 +321,19 @@ export const getServerSideProps: GetServerSideProps = async () => {
     type,
     price,
    },
+   "vegappetizers": *[_type == 'VegAppetizers']{
+    _id,
+    title,
+    type,
+    price,
+    },
+    "nonvegappetizers": *[_type == 'NonVegAppetizers']{
+    _id,
+    title,
+    type,
+    price,
+    },
+
  "bread": *[_type == 'bread']{
     _id,
     title,
