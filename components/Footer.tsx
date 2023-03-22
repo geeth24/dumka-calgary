@@ -68,9 +68,18 @@ function Footer() {
           <SiFramer className="inline-block h-4 w-4" />
         </Link>{" "}
         by{" "}
-        <Link href="https://geethg.com" className="text-darkred underline">
-          Geeth
-        </Link>
+        <span className="rounded-full bg-midred p-0.5">
+          <Link href="https://geethg.com" className="text-beige">
+            Geeth
+            <Image
+              src="/geeth.svg"
+              className="ml-1 mb-1 inline-block h-3 w-3"
+              alt="Geeth Logo"
+              width={20}
+              height={20}
+            />{" "}
+          </Link>
+        </span>
       </span>
     </footer>
   );
