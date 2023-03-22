@@ -54,7 +54,7 @@ function Contact() {
                 <span className="text-xl text-midred">
                   Open Tuesday - Sunday <br />{" "}
                   <span className="text-xl text-darkred">
-                    from 4:00 PM - 1:00 AM
+                    from 12:00 PM - 10:00 PM
                   </span>
                 </span>
               </h2>
