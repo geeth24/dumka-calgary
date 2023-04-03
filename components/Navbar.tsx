@@ -17,17 +17,18 @@ export default function Navbar() {
       }`}
     >
       <Link
-        className={`flex flex-row items-center  justify-center space-x-4 
+        className={`flex flex-row items-center  justify-center space-x-2 
       ${isMenu ? "hidden lg:flex" : "flex-row"}`}
         href="/"
       >
+        <Image src="/halal.png" width={40} height={40} alt="" className="" />
         <Image
           src="/logo.png"
-          width={140}
+          width={160}
           height={40}
           alt=""
-          className="lg:h-[60px] lg:w-[160px]"
-        />
+          className="h-15"
+        />{" "}
       </Link>
       <div
         className={`fixed top-0 left-0 flex h-screen w-screen flex-col gap-[40px] px-[59px] pt-[100px] text-left text-[45px] font-bold text-midred transition-all duration-300  lg:hidden lg:-translate-x-[78px] lg:px-0 ${
