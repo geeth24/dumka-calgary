@@ -101,7 +101,7 @@ export default function Navbar() {
       </div>
       {!isMenu && (
         <Link
-          className="ml-auto mr-[20px] flex   flex-col  items-center justify-center  rounded-full bg-midred  px-[20px]  py-[6px] text-[16px] font-semibold text-buttonbeige transition-all duration-300 active:scale-95 lg:ml-10"
+          className="ml-auto mr-[20px] flex flex-col  items-center justify-center  rounded-full bg-midred  px-[20px]  py-[6px] text-[16px] font-semibold text-buttonbeige transition-all duration-300 active:scale-95 lg:ml-10"
           href="/contact"
           onClick={() => {
             setIsMenu(false);
