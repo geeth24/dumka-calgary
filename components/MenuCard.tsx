@@ -1,5 +1,6 @@
 import React from "react";
 interface MenuCardProps {
+  [key: string]: any;
   title: string;
   type: string;
   price: number;

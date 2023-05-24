@@ -1,5 +1,4 @@
 import home from "./homeData";
-// import AppetizersSides from "./menu/AppetizersSides";
 import Breads from "./menu/Breads";
 import Breakfast from "./menu/Breakfast";
 import Desserts from "./menu/Desserts";
@@ -13,18 +12,33 @@ import RiceDish from "./menu/RiceDish";
 import VegAppetizers from "./menu/VegAppetizers";
 import NonVegAppetizers from "./menu/NonVegAppetizers";
 
+import Chats from "./menu/Chats";
+import Haleem from "./menu/Haleem";
+import Pickles from "./menu/Pickles";
+import Pulav from "./menu/Pulav";
+import Snacks from "./menu/Snacks";
+import NonVegEntree from "./menu/NonVegEntree";
+import VegEntrees from "./menu/VegEntrees";
+
+
 export const schemaTypes = [
   home,
-  // AppetizersSides,
   VegAppetizers,
   NonVegAppetizers,
-  Breads,
   Breakfast,
-  Desserts,
-  Drinks,
+  VegEntrees,
+  NonVegEntree,
   Entrees,
   KebabsTandoor,
+  Pulav,
+  RiceDish,
   Kids,
   Noodles,
-  RiceDish,
+  Chats,
+  Haleem,
+  Pickles,
+  Breads,
+  Snacks,
+  Desserts,
+  Drinks,
 ];

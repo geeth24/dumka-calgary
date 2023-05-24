@@ -23,6 +23,7 @@ export interface MenuData {
 }
 
 export interface MenuCollection {
+  [key: string]: any;
   appetizerssides: MenuData[];
   vegappetizers: MenuData[];
   nonvegappetizers: MenuData[];
