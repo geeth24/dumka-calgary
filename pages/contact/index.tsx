@@ -15,7 +15,7 @@ function Contact() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1024 1024"
-              className="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:translate-y-0 lg:-translate-x-1/2"
+              className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
               aria-hidden="true"
             >
               <circle
@@ -49,10 +49,16 @@ function Contact() {
                   Or walk into our restaurant
                 </span>
                 <br />
-                <span className="text-xl text-darkred">Closed on Monday</span>
+                <span className="text-xl text-darkred">Closed on Tuesday</span>
                 <br />
                 <span className="text-xl text-midred">
-                  Open Tuesday - Sunday <br />{" "}
+                  Open Monday - Friday <br />{" "}
+                  <span className="text-xl text-darkred">
+                    from 5:00 PM - 10:00 PM <br />
+                  </span>
+                </span>
+                <span className="text-xl text-midred">
+                  Open Saturday - Sunday <br />{" "}
                   <span className="text-xl text-darkred">
                     from 12:00 PM - 10:00 PM
                   </span>
