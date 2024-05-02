@@ -6,6 +6,7 @@ import { useState } from "react";
 import Modal from "../components/Modal";
 import { sanityClient, urlFor } from "../sanity";
 import { HomeData } from "../typings";
+import Image from "next/image";
 interface Props {
   homeData: HomeData;
 }
@@ -25,6 +26,15 @@ export default function Home({ homeData }: Props) {
       <section className="h-full bg-opacity-10 bg-[url('/bg/hero.png')] bg-cover bg-center bg-no-repeat">
         <div className="mx-auto grid max-w-screen-xl overflow-hidden px-8 py-24 md:px-16 lg:grid-cols-12 lg:gap-8 lg:py-32 xl:gap-0">
           <div className="mr-auto place-self-center lg:col-span-5">
+            <Link href="https://calgarybestrated.com/best-indian-catering-in-calgary/">
+              <Image
+                src="/CalgaryBestRatedLogo_Red_Badge.png"
+                width={200}
+                height={200}
+                alt="Calgary Best Rated"
+                className="mb-4 h-fit w-52"
+              />
+            </Link>
             <h1 className="mb-4 max-w-2xl text-4xl font-bold  text-midred md:text-5xl xl:text-6xl">
               {homeData.title} <br />
               {homeData.firstSubtitle} <br />
