@@ -52,22 +52,22 @@ function Contact() {
                 <span className="text-xl text-darkred">Closed on Tuesday</span>
                 <br />
                 <span className="text-xl text-midred">
-                  Open Monday - Friday <br />{" "}
+                  Open Monday - Saturday <br />{" "}
                   <span className="text-xl text-darkred">
-                    from 5:00 PM - 10:00 PM <br />
+                    from 12:00 PM - 10:00 PM <br />
                   </span>
                 </span>
                 <span className="text-xl text-midred">
-                  Open Saturday - Sunday <br />{" "}
+                  Open Sunday <br />{" "}
                   <span className="text-xl text-darkred">
-                    from 12:00 PM - 10:00 PM
+                    from 12:00 AM - 8:00 PM
                   </span>
                 </span>
               </h2>
 
               <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
                 <Link
-                  href="tel:+1 825-853-9990"
+                  href="tel:+1 825-540-4433"
                   className="mr-3 rounded-full bg-darkred px-5 py-2.5 text-center text-sm font-medium text-beige shadow md:mr-0"
                 >
                   <div className="flex items-center gap-x-2">

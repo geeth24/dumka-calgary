@@ -4,7 +4,7 @@ import Image from "next/image";
 import { SiNextdotjs, SiTailwindcss, SiFramer } from "react-icons/si";
 function Footer() {
   return (
-    <footer className="rounded-lg p-4 py-[13px]  px-[16px] md:px-[4vw] lg:mt-5 lg:pt-[35px]">
+    <footer className="rounded-lg p-4 px-[16px]  py-[13px] md:px-[4vw] lg:mt-5 lg:pt-[35px]">
       <div className="sm:flex sm:items-center sm:justify-between">
         <Link href="/" className=" flex items-center ">
           <Image
@@ -41,9 +41,9 @@ function Footer() {
       </div>
 
       <hr className="my-3 border-midred sm:mx-auto lg:my-4" />
-      <p className="mt-2 text-sm text-navred sm:text-center">
-        <Link href="tel:+1 825-853-9990" className="underline">
-          +1 825-853-9990{" "}
+      <p className="mt-2 text-sm text-navred ">
+        <Link href="tel:+1 825-540-4433" className="underline">
+          +1 825-540-4433{" "}
         </Link>{" "}
         |{" "}
         <Link
@@ -53,31 +53,14 @@ function Footer() {
           2929 Sunridge Way NE #102, Calgary
         </Link>
       </p>
-      <span className="block text-sm text-navred sm:text-center">
-        © {new Date().getFullYear()} Dumka Calgary. All rights reserved.
+      <span className="block text-sm text-navred ">
+        Dumka Calgary © {new Date().getFullYear()}
       </span>
-      <span className="block text-sm text-navred sm:text-center">
-        Developed with{" "}
-        <Link href="https://nextjs.org/" className="hover:underline">
-          <SiNextdotjs className="inline-block h-4 w-4" />
-        </Link>{" "}
-        <Link href="https://tailwindcss.com/" className="hover:underline">
-          <SiTailwindcss className="inline-block h-4 w-4" />
-        </Link>{" "}
-        <Link href="https://www.framer.com/motion/" className="hover:underline">
-          <SiFramer className="inline-block h-4 w-4" />
-        </Link>{" "}
-        by{" "}
-        <span className="rounded-full bg-midred p-0.5">
-          <Link href="https://geethg.com" className="text-beige">
+      <span className="block text-sm text-navred">
+        Built by{" "}
+        <span className=" text-sm text-navred underline">
+          <Link href="https://geethg.com" className="text-navred">
             Geeth
-            <Image
-              src="/geeth.svg"
-              className="ml-1 mb-1 inline-block h-3 w-3"
-              alt="Geeth Logo"
-              width={20}
-              height={20}
-            />{" "}
           </Link>
         </span>
       </span>

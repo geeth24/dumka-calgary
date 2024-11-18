@@ -23,7 +23,7 @@ export default function Home({ homeData }: Props) {
         title={homeData.modalTitle}
         description={homeData.modalDescription}
       />
-      <section className="h-full bg-opacity-10 bg-[url('/bg/hero.png')] bg-cover bg-center bg-no-repeat">
+      <section className="h-screen bg-opacity-10 bg-[url('/bg/hero.png')] bg-cover bg-center bg-no-repeat">
         <div className="mx-auto grid max-w-screen-xl overflow-hidden px-8 py-24 md:px-16 lg:grid-cols-12 lg:gap-8 lg:py-32 xl:gap-0">
           <div className="mr-auto place-self-center lg:col-span-5">
             <Link href="https://calgarybestrated.com/best-indian-catering-in-calgary/">
